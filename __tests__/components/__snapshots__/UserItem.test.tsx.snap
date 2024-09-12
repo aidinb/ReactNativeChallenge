@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserItem Component renders correctly and displays user name 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignSelf": "center",
+      "backgroundColor": "#ffffff",
+      "borderRadius": 8,
+      "elevation": 2,
+      "marginVertical": 10,
+      "opacity": 1,
+      "paddingVertical": 15,
+      "shadowColor": "#000",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.2,
+      "shadowRadius": 4,
+      "width": 675,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#333",
+        "fontSize": 16,
+        "paddingLeft": 15,
+      }
+    }
+  >
+    John Doe
+  </Text>
+</View>
+`;

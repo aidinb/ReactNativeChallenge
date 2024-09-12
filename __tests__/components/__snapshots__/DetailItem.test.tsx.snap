@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailItem Component renders correctly when value is undefined 1`] = `
+<View
+  style={
+    {
+      "borderBottomColor": "#ccc",
+      "borderBottomWidth": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 15,
+      "width": 750,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#888",
+        "fontSize": 14,
+        "marginBottom": 5,
+      }
+    }
+  >
+    Website
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#333",
+        "fontSize": 16,
+        "textAlign": "center",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`DetailItem Component renders correctly with title and value 1`] = `
+<View
+  style={
+    {
+      "borderBottomColor": "#ccc",
+      "borderBottomWidth": 1,
+      "paddingHorizontal": 20,
+      "paddingVertical": 15,
+      "width": 750,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#888",
+        "fontSize": 14,
+        "marginBottom": 5,
+      }
+    }
+  >
+    Name
+  </Text>
+  <Text
+    style={
+      {
+        "color": "#333",
+        "fontSize": 16,
+        "textAlign": "center",
+      }
+    }
+  >
+    John Doe
+  </Text>
+</View>
+`;

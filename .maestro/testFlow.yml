@@ -1,0 +1,16 @@
+# File: integration_test.yaml
+appId: com.reactnativechallenge
+---
+- launchApp
+- assertVisible:
+    text: "User 1"
+- assertVisible:
+    text: "User 2"
+- tapOn:
+    text: "User 1"
+- assertVisible:
+     text: "Name: John Doe"
+- assertVisible:
+      text: "Email: john@example.com"
+- assertVisible:
+      text: "Website: www.example.com"

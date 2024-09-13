@@ -1,29 +1,14 @@
 import React from 'react';
-import { render, waitFor } from '@testing-library/react-native';
-import { act } from 'react-test-renderer'; // Import act to handle async operations
-import { useStores } from '../stores'; // Mock the useStores hook
-import NavigationService from '../navigation/NavigationService.ts'; // Mock NavigationService
-import UserItem from '../components/UserItem.tsx';
-import Items from "../../src/screens/Items.tsx"; // Mock UserItem component
+import { render, waitFor, fireEvent } from '@testing-library/react-native';
+import { act } from 'react-test-renderer';
+import Items from '../../src/screens/Items.tsx';
+import NavigationService from '../../src/navigation/NavigationService.ts';
 
-// Mock the useStores hook to control its output
-jest.mock('../stores', () => ({
-    useStores: () => ({
-        mainStore: {
-            getAllUsers: jest.fn(),
-            allUsers: [{ id: '1', name: 'User 1' }, { id: '2', name: 'User 2' }],
-            setActiveUser: jest.fn(),
-        },
-    }),
-}));
 
-// Mock NavigationService to prevent actual navigation
-jest.mock('../navigation/NavigationService.ts', () => ({
+// Mock NavigationService
+jest.mock('../../src/navigation/NavigationService.ts', () => ({
     navigate: jest.fn(),
 }));
-
-// Mock UserItem component
-jest.mock('../components/UserItem.tsx', () => 'UserItem');
 
 describe('Items Screen', () => {
     it('renders correctly and displays user items', async () => {
@@ -44,9 +29,8 @@ describe('Items Screen', () => {
 
         // Simulate pressing a user item
         await act(async () => {
-            // Find the first user item and simulate a press
-            const userItem = getByText('User 1').closest('TouchableOpacity');
-            userItem?.props.onPress();
+            // Find the first user item by text and simulate a press
+            fireEvent.press(getByText('User 1'));
         });
 
         // Verify that the navigation function was called

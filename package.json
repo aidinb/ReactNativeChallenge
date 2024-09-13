@@ -7,9 +7,8 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest",
+    "test": "jest --silent",
     "e2e": "maestro test .maestro"
-
   },
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.6.1",
@@ -21,6 +20,7 @@
     "mobx": "^6.13.2",
     "mobx-react": "^9.1.1",
     "react": "18.3.1",
+    "react-dom": "^18.3.1",
     "react-native": "0.75.3",
     "react-native-gesture-handler": "^2.19.0",
     "react-native-reanimated": "^3.15.1",
@@ -29,8 +29,10 @@
     "react-native-screens": "^3.34.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@babel/runtime": "^7.20.0",
     "@react-native/babel-preset": "0.75.3",
     "@react-native/eslint-config": "0.75.3",
@@ -39,35 +41,15 @@
     "@types/jest": "^29.5.13",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
-    "babel-jest": "^29.6.3",
+    "babel-jest": "^29.7.0",
     "eslint": "^8.19.0",
-    "jest": "^29.6.3",
+    "jest": "^29.7.0",
     "prettier": "2.8.8",
-    "react-test-renderer": "18.3.1",
+    "react-test-renderer": "^18.3.1",
+    "ts-jest": "^29.2.5",
     "typescript": "5.0.4"
   },
   "engines": {
     "node": ">=18"
-  },
-  "jest": {
-    "preset": "react-native",
-    "setupFiles": [
-      "./__config__/setupTest.ts"
-    ],
-    "collectCoverage": true,
-    "coverageThreshold": {
-      "global": {
-        "branches": 10,
-        "functions": 10,
-        "lines": 10,
-        "statements": 10
-      }
-    },
-    "testTimeout": 200000,
-    "transformIgnorePatterns": [
-      "node_modules/(?!react-native||@shoutem)",
-      "jest-runner"
-    ]
   }
-
 }

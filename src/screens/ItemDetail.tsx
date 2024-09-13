@@ -1,17 +1,19 @@
 import React from 'react';
-import {View, ScrollView, StyleSheet, ViewStyle} from 'react-native';
-import {observer} from 'mobx-react';
-import {COLORS} from '../styles';
-import {useStores} from "../stores";
-import DetailItem from "../components/DetailItem.tsx";
+import { View, ScrollView, StyleSheet, ViewStyle } from 'react-native';
+import { observer } from 'mobx-react';
+import { COLORS } from '../styles';
+import { useStores } from '../stores';
+import DetailItem from '../components/DetailItem';
+import Loading from '../components/Loading';
+import ErrorMessage from '../components/ErrorMessage';
 
 const ItemDetail: React.FC = () => {
-    const {mainStore} = useStores();
-    const user = mainStore.user;
+    const { mainStore } = useStores();
+    const { user, loading, error } = mainStore;
 
     return (
         <ScrollView contentContainerStyle={styles.scrollContainer}>
-            {user && (
+            {!loading && !error && user && (
                 <View style={styles.container}>
                     {/* User Details */}
                     <DetailItem title="Name" value={user.name} />
@@ -31,6 +33,9 @@ const ItemDetail: React.FC = () => {
                     <DetailItem title="Business" value={user.company?.bs} />
                 </View>
             )}
+
+            {loading && <Loading />}
+            {error && <ErrorMessage message={error} />}
         </ScrollView>
     );
 };

@@ -11,7 +11,7 @@ export function Routes() {
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator initialRouteName="Main">
           <Stack.Screen name="Main" component={TabNavigator}
-                        options={{headerShown: false,}} />
+                        options={{headerShown: false}} />
 
         {Object.entries(SCREENS).length > 0 && Object.entries(SCREENS).map(([name, screen]) => (
           <Stack.Screen

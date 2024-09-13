@@ -9,7 +9,6 @@ export const navigationRef = createNavigationContainerRef<ParamListBase>();
 const navigate = (name: string, params?: ParamListBase) => {
   if (navigationRef.isReady()) {
     navigationRef.navigate(name, params);
-    // navigationRef.navigate(name, params);
   }
 };
 

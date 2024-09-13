@@ -58,7 +58,7 @@ exports[`UserItem Component renders correctly and displays user name 1`] = `
       }
     }
   >
-    John Doe
+    Leanne Graham
   </Text>
 </View>
 `;

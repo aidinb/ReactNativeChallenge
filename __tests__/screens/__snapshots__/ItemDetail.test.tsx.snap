@@ -1,0 +1,397 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemDetail Screen renders correctly and displays user details 1`] = `
+<RCTScrollView
+  contentContainerStyle={
+    {
+      "paddingBottom": 20,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        {
+          "backgroundColor": "#ffffff",
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Name
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          John Doe
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Email
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          john@example.com
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Website
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          www.example.com
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Phone
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          123-456-7890
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Street
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          123 Main St
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Suite
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Apt 4B
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          City
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Sample City
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Zipcode
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          12345
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Company Name
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Sample Company
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          CatchPhrase
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          We do things!
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "borderBottomColor": "#ccc",
+            "borderBottomWidth": 1,
+            "paddingHorizontal": 20,
+            "paddingVertical": 15,
+            "width": 750,
+          }
+        }
+      >
+        <Text
+          style={
+            {
+              "color": "#888",
+              "fontSize": 14,
+              "marginBottom": 5,
+            }
+          }
+        >
+          Business
+        </Text>
+        <Text
+          style={
+            {
+              "color": "#333",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+          Business Solutions
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

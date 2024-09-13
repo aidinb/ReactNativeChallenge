@@ -1,23 +1,10 @@
 import React from 'react';
-import {
-  TouchableOpacity,
-  Text,
-  StyleSheet,
-  ViewStyle,
-  TextStyle,
-  Dimensions,
-} from 'react-native';
-
-interface User {
-  id: number;
-  parentId: number;
-  imagePath: string;
-  name: string;
-}
+import { TouchableOpacity, Text, StyleSheet, Dimensions } from 'react-native';
+import { Item } from '../../src/utils/types.ts'; // Assuming you have the Item type defined in types.ts
 
 interface UserItemProps {
-  item: User;
-  onPress: (item: User) => void;
+  item: Item; // Use the Item type if it matches or adjust as necessary
+  onPress: (item: Item) => void;
 }
 
 const { width } = Dimensions.get('window');
@@ -43,12 +30,12 @@ const styles = StyleSheet.create({
     shadowRadius: 4, // Shadow blur radius
     elevation: 2, // For Android shadow effect
     alignSelf: 'center', // Center the box horizontally
-  } as ViewStyle,
+  },
   text: {
     fontSize: 16,
     color: '#333',
-    paddingLeft:15
-  } as TextStyle,
+    paddingLeft: 15,
+  },
 });
 
 export default React.memo(UserItem);

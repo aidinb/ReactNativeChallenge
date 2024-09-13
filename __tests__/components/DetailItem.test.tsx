@@ -1,28 +1,39 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import DetailItem from "../../src/components/DetailItem.tsx";
+import DetailItem from '../../src/components/DetailItem'; // Ensure the correct import path
 
 describe('DetailItem Component', () => {
     it('renders correctly with title and value', () => {
-        const { toJSON, getByText } = render(<DetailItem title="Name" value="John Doe" />);
+        const { toJSON, getByText } = render(
+            <DetailItem title="Test Title" value="Test Value" />
+        );
 
         // Check if the component renders correctly
         expect(toJSON()).toMatchSnapshot();
 
-        // Check if the title and value are displayed
-        expect(getByText('Name')).toBeTruthy();
-        expect(getByText('John Doe')).toBeTruthy();
+        // Check if title and value are displayed
+        expect(getByText('Test Title')).toBeTruthy();
+        expect(getByText('Test Value')).toBeTruthy();
     });
 
-    it('renders correctly when value is undefined', () => {
-        const { toJSON, getByText } = render(<DetailItem title="Website" value={undefined} />);
+    it('does not render anything if title is missing', () => {
+        const { toJSON } = render(<DetailItem title="" value="Test Value" />);
 
-        // Check if the component renders correctly
-        expect(toJSON()).toMatchSnapshot();
+        // Ensure component returns null
+        expect(toJSON()).toBeNull();
+    });
 
-        // Check if the title is displayed and value is not shown
-        expect(getByText('Website')).toBeTruthy();
-        // Ensure value is not present in the component
-        expect(getByText('Website').props.children).toBeUndefined();
+    it('does not render anything if value is missing', () => {
+        const { toJSON } = render(<DetailItem title="Test Title" value="" />);
+
+        // Ensure component returns null
+        expect(toJSON()).toBeNull();
+    });
+
+    it('does not render anything if both title and value are missing', () => {
+        const { toJSON } = render(<DetailItem title="" value="" />);
+
+        // Ensure component returns null
+        expect(toJSON()).toBeNull();
     });
 });

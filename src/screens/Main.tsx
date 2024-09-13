@@ -1,27 +1,24 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, Dimensions, ViewStyle, TextStyle, ImageStyle} from 'react-native';
-import {observer} from 'mobx-react';
-import {COLORS} from '../styles';
+import { View, Text, Image, StyleSheet, Dimensions } from 'react-native';
+import { observer } from 'mobx-react';
+import { COLORS } from '../styles';
+import Loading from '../components/Loading';
+import ErrorMessage from '../components/ErrorMessage';
+import { useStores } from '../stores';
 
-// Import the SVG file
-// import WelcomeSvg from '../assets/welcome.svg'; // Adjust path as needed
+const logo = require('../assets/browse-cuisines.png');
 
-// Import the logo from local assets
-const logo = require('../assets/browse-cuisines.png'); // Adjust the path based on your project structure
-
-const {width, height} = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 
 const Main: React.FC = () => {
+  const { mainStore } = useStores(); // Access the store
+
   return (
       <View style={styles.container}>
-        {/* Welcome Text */}
         <Text style={styles.welcomeText}>Welcome</Text>
-
-        {/* Welcome SVG */}
-        {/*<WelcomeSvg width={width * 0.6} height={height * 0.3} />*/}
-
-        {/* Logo */}
-        <Image source={logo} style={styles.logo} />
+        <Image source={logo} style={styles.logo} testID={'logo-image'}/>
+        {mainStore.error && <ErrorMessage message={mainStore.error} />}
+        {mainStore.loading && <Loading />}
       </View>
   );
 };
@@ -32,22 +29,22 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  } as ViewStyle,
+  },
   welcomeText: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: 20, // Space between the text and the SVG
+    marginBottom: 20, // Space between the text and the logo
     textAlign: 'center',
     position: 'absolute', // Fixes the text at the top
     top: 80,
-  } as TextStyle,
+  },
   logo: {
     width: width * 0.5,  // Logo takes 50% of screen width
     height: height * 0.2, // Logo takes 20% of screen height
     resizeMode: 'contain', // Ensure the logo maintains aspect ratio
-    marginTop: 40, // Space between SVG and logo
-  } as ImageStyle,
+    marginTop: 40, // Space between text and logo
+  },
 });
 
 export default observer(Main);

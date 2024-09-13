@@ -6,6 +6,6 @@ export const SCREENS = {
         options:{
         title: 'User Detail',
             headerBackTitle: '',
-        }
+        },
   },
 };

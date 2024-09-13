@@ -1,4 +1,4 @@
-appId: org.reactjs.native.example.reactnativechallenge
+appId: com.reactnativechallenge
 ---
 - launchApp
 - assertVisible:

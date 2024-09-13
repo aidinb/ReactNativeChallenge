@@ -5,8 +5,8 @@ import Items from '../screens/Items';
 
 // Define the type for your BottomTabNavigator
 export type BottomTabNavigatorParamList = {
-    MainTab: undefined; // No parameters are expected for MainTab
-    ItemsTab: undefined; // No parameters are expected for ItemsTab
+    Main: undefined; // No parameters are expected for MainTab
+    Users: undefined; // No parameters are expected for ItemsTab
 };
 
 // Create a Tab Navigator with the type defined
@@ -16,11 +16,11 @@ export const TabNavigator: React.FC = () => {
     return (
         <Tab.Navigator>
             <Tab.Screen
-                name="MainTab" // Ensure the name matches the type key
+                name="Main" // Ensure the name matches the type key
                 component={Main}
             />
             <Tab.Screen
-                name="ItemsTab" // Ensure the name matches the type key
+                name="Users" // Ensure the name matches the type key
                 component={Items}
             />
         </Tab.Navigator>

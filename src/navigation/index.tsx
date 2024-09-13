@@ -9,8 +9,8 @@ const Stack = createStackNavigator<ParamListBase>();
 export function Routes() {
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator initialRouteName="Main">
-          <Stack.Screen name="Main" component={TabNavigator}
+      <Stack.Navigator initialRouteName="Root">
+          <Stack.Screen name="Root" component={TabNavigator}
                         options={{headerShown: false}} />
 
         {Object.entries(SCREENS).length > 0 && Object.entries(SCREENS).map(([name, screen]) => (

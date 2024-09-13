@@ -1,15 +1,14 @@
-appId: com.reactnativechallenge
+appId: org.reactjs.native.example.reactnativechallenge
 ---
 - launchApp
+- runFlow:
+    when:
+      visible:
+        text: "Welcome"
+    commands:
+      - tapOn: "Users, tab, 2 of 2"
 - assertVisible:
-    text: "User 1"
+    text: "Glenna Reichert"
+- tapOn: "Glenna Reichert"
 - assertVisible:
-    text: "User 2"
-- tapOn:
-    text: "User 1"
-- assertVisible:
-     text: "Name: John Doe"
-- assertVisible:
-      text: "Email: john@example.com"
-- assertVisible:
-      text: "Website: www.example.com"
+     text: "Glenna Reichert"

@@ -1,14 +1,37 @@
 appId: org.reactjs.native.example.reactnativechallenge
 ---
 - launchApp
-- runFlow:
-    when:
-      visible:
-        text: "Welcome"
-    commands:
-      - tapOn: "Users, tab, 2 of 2"
+- assertVisible:
+    text: "Welcome"
+- assertVisible:
+    id: "logo-image"
+- tapOn: "Users, tab, 2 of 2"
+- assertVisible:
+    text: "Nicholas Runolfsdottir V"
 - assertVisible:
     text: "Glenna Reichert"
 - tapOn: "Glenna Reichert"
 - assertVisible:
      text: "Glenna Reichert"
+- assertVisible:
+     text: "Chaim_McDermott@dana.io"
+- assertVisible:
+     text: "(775)976-6794 x41206"
+- assertVisible:
+     text: "76495-3109"
+- assertVisible:
+     text: "Yost and Sons"
+- tapOn: "Go back"
+- assertVisible:
+    text: "Clementina DuBuque"
+- tapOn: "Clementina DuBuque"
+- assertVisible:
+    text: "Clementina DuBuque"
+- assertVisible:
+    text: "Rey.Padberg@karina.biz"
+- assertVisible:
+    text: "024-648-3804"
+- assertVisible:
+    text: "31428-2261"
+- assertVisible:
+    text: "Hoeger LLC"

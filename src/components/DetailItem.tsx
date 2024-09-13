@@ -4,8 +4,8 @@ import { View, Text, StyleSheet, Dimensions } from 'react-native';
 const { width } = Dimensions.get('window');
 
 interface DetailItemProps {
-  title: string;  // Make title optional
-  value: string;  // Make value optional
+  title?: string;
+  value?: string;
 }
 
 const DetailItem: React.FC<DetailItemProps> = ({ title, value }) => {
@@ -23,21 +23,21 @@ const DetailItem: React.FC<DetailItemProps> = ({ title, value }) => {
 
 const styles = StyleSheet.create({
   detailItem: {
-    width: width,
+    width,
     paddingVertical: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc', // Bottom border separator
+    borderBottomColor: '#ccc',
     paddingHorizontal: 20,
   },
   title: {
     fontSize: 14,
-    color: '#888', // Gray color for title
+    color: '#888',
     marginBottom: 5,
   },
   value: {
     fontSize: 16,
-    color: '#333', // Darker color for the value
-    textAlign: 'center', // Centered text
+    color: '#333',
+    textAlign: 'center',
   },
 });
 

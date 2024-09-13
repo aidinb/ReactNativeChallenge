@@ -3,7 +3,7 @@ export interface Address {
     street: string;
     suite: string;
     zipcode: string;
-    geo: object[]; // Assuming geo is an array of objects, adjust if necessary
+    geo: object[];
 }
 
 export interface Company {

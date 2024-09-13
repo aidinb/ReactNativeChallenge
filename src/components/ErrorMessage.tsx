@@ -16,7 +16,7 @@ const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => {
 
 const styles = StyleSheet.create({
   errorContainer: {
-    marginTop: 20, // Space between logo/loading indicator and error message
+    marginTop: 20,
     alignItems: 'center',
   },
   errorText: {

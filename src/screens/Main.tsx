@@ -34,16 +34,16 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     color: '#333',
-    marginBottom: 20, // Space between the text and the logo
+    marginBottom: 20,
     textAlign: 'center',
-    position: 'absolute', // Fixes the text at the top
+    position: 'absolute',
     top: 80,
   },
   logo: {
-    width: width * 0.5,  // Logo takes 50% of screen width
-    height: height * 0.2, // Logo takes 20% of screen height
-    resizeMode: 'contain', // Ensure the logo maintains aspect ratio
-    marginTop: 40, // Space between text and logo
+    width: width * 0.5,
+    height: height * 0.2,
+    resizeMode: 'contain',
+    marginTop: 40,
   },
 });
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, Dimensions } from 'react-native';
-import { Item } from '../../src/utils/types.ts'; // Assuming you have the Item type defined in types.ts
+import { Item } from '../utils/types.ts';
 
 interface UserItemProps {
-  item: Item; // Use the Item type if it matches or adjust as necessary
+  item: Item;
   onPress: (item: Item) => void;
 }
 
@@ -12,24 +12,25 @@ const { width } = Dimensions.get('window');
 const UserItem: React.FC<UserItemProps> = ({ item, onPress }) => (
     <TouchableOpacity
         onPress={() => onPress(item)}
-        style={styles.card}>
+        style={styles.card}
+    >
       <Text style={styles.text}>{item.name}</Text>
     </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
   card: {
-    width: width * 0.9, // Width of each card, with some margin
+    width: width * 0.9,
     paddingVertical: 15,
-    backgroundColor: '#ffffff', // White background for the box
-    marginVertical: 10, // Space between each box
-    borderRadius: 8, // Rounded corners for the white box
-    shadowColor: '#000', // Shadow color
-    shadowOffset: { width: 0, height: 2 }, // Shadow offset
-    shadowOpacity: 0.2, // Shadow opacity
-    shadowRadius: 4, // Shadow blur radius
-    elevation: 2, // For Android shadow effect
-    alignSelf: 'center', // Center the box horizontally
+    backgroundColor: '#ffffff',
+    marginVertical: 10,
+    borderRadius: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 2,
+    alignSelf: 'center',
   },
   text: {
     fontSize: 16,

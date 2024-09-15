@@ -6,7 +6,7 @@ import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
 import { useStores } from '../stores';
 
-const logo = require('../assets/browse-cuisines.png');
+const logo = require('../assets/reactnativelogo.png');
 
 const { width, height } = Dimensions.get('window');
 

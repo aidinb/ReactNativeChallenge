@@ -16,7 +16,9 @@ export function Routes() {
                     component={TabNavigator}
                     options={{ headerShown: false }}
                 />
-                {Object.entries(SCREENS).map(([name, { component, options }]) => (
+                {Object.entries(SCREENS)
+                    .map(([name, { component,
+                        options }]) => (
                     <Stack.Screen
                         key={name}
                         name={name}

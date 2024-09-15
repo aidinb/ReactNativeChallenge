@@ -16,5 +16,5 @@ module.exports = {
       statements: 10,
     },
   },
-  setupFilesAfterEnv: ['./__config__/setupTest.ts'], // Adjust if you have a setup file
+  setupFilesAfterEnv: ['./__config__/setupTest.ts'],
 };

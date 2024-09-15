@@ -32,7 +32,7 @@ A React Native project that demonstrates a simple app with user navigation and s
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/reactnativechallenge.git
+   git clone https://github.com/aidinb/ReactNativeChallenge
    ```
 
 2. **Navigate to the project directory**:

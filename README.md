@@ -224,4 +224,14 @@ I have published around 15 different types of mobile apps for various countries.
 
 This project is licensed under the MIT License. For any inquiries, contact Aidin Bazarchi at aidin.b2009@gmail.com.
 
+
+<img width="1485" alt="Screenshot 2024-09-15 at 10 21 35 PM" src="https://github.com/user-attachments/assets/a53437b9-ad0c-4f32-8ff7-31cb27df3683">
+<img width="1171" alt="Screenshot 2024-09-15 at 10 20 59 PM" src="https://github.com/user-attachments/assets/1a00f92d-b550-4da8-b8ff-5e7fe40e0576">
+<img width="1063" alt="Screenshot 2024-09-15 at 10 20 10 PM" src="https://github.com/user-attachments/assets/2fef368b-c016-44e1-9df1-6a19ee20b7ff">
+<img width="435" alt="Screenshot 2024-09-15 at 10 21 49 PM" src="https://github.com/user-attachments/assets/c84ee8e8-7231-4734-91c5-410c51a53d98">
+<img width="439" alt="Screenshot 2024-09-15 at 10 21 57 PM" src="https://github.com/user-attachments/assets/6ae62279-c91c-4749-bf68-15cc65a60f6b">
+<img width="439" alt="Screenshot 2024-09-15 at 10 22 07 PM" src="https://github.com/user-attachments/assets/8981b97c-a3f2-4d9e-bfa5-8cbbd0516243">
+
+
+
 ---

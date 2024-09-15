@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, waitFor } from '@testing-library/react-native';
-import ItemDetail from '../../src/screens/ItemDetail.tsx'; // Import ItemDetail from the correct path
+import ItemDetail from '../../src/screens/ItemDetail.tsx';
 
 
 describe('ItemDetail Screen', () => {

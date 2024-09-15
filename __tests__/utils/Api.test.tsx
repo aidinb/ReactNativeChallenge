@@ -1,5 +1,5 @@
 import { baseAPI } from '../../src/utils/baseUrl';
-import {getItems} from '../../src/utils/api.ts'; // Adjust the import path as needed
+import {getItems} from '../../src/utils/api.ts';
 
 // Mock the baseAPI.get method
 jest.mock('../../src/utils/baseUrl', () => ({

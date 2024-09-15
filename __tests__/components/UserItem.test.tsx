@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react-native';
-import UserItem from '../../src/components/UserItem'; // Ensure the correct import path
-import { Item } from '../../src/utils/types'; // Import the Item type
+import UserItem from '../../src/components/UserItem';
+import { Item } from '../../src/utils/types';
 
 describe('UserItem Component', () => {
     const mockOnPress = jest.fn(); // Mock function to track if it's called
@@ -15,7 +15,7 @@ describe('UserItem Component', () => {
         website: 'hildegard.org',
         address: {
             city: 'Gwenborough',
-            geo: [{ lat: '1', lng: '1' }], // Assuming geo is an array of objects
+            geo: [{ lat: '1', lng: '1' }],
             street: 'Kulas Light',
             suite: 'Apt. 556',
             zipcode: '92998-3874',

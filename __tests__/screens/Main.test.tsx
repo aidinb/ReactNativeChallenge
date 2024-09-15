@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import Main from '../../src/screens/Main'; // Adjust path if needed
+import Main from '../../src/screens/Main';
 
 describe('Main Screen', () => {
     it('renders correctly', () => {

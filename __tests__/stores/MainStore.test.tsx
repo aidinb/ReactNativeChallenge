@@ -1,4 +1,3 @@
-// Mock the getItems function
 import MainStore from '../../src/stores/mainStore';
 import { Item } from '../../src/utils/types';
 import { getItems } from '../../src/utils/api';

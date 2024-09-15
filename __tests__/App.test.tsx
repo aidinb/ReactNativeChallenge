@@ -1,13 +1,8 @@
-/**
- * @format
- */
-
 import 'react-native';
 import React from 'react';
-import App from '../App'; // Adjust the path as needed
+import App from '../App';
 
-// Import testing utilities
-import { render } from '@testing-library/react-native'; // Use @testing-library/react-native for more comprehensive testing
+import { render } from '@testing-library/react-native';
 
 describe('App Component', () => {
   it('renders correctly', () => {

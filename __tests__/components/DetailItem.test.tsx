@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
-import DetailItem from '../../src/components/DetailItem'; // Ensure the correct import path
+import DetailItem from '../../src/components/DetailItem';
 
 describe('DetailItem Component', () => {
     it('renders correctly with title and value', () => {

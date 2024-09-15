@@ -12,7 +12,7 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigat
                 const label = typeof options.tabBarLabel === 'function'
                     ? options.tabBarLabel({
                         focused: isFocused,
-                        color: isFocused ? 'blue' : 'black',
+                        color: isFocused ? COLORS.primary : COLORS.black,
                         position: 'below-icon',
                         children: '' })
                     : options.tabBarLabel !== undefined
@@ -36,9 +36,9 @@ const CustomTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, navigat
                     <TouchableOpacity
                         key={route.key}
                         onPress={onPress}
-                        style={[styles.tab, { borderColor: isFocused ? 'blue' : 'gray' }]}
+                        style={[styles.tab, { borderColor: isFocused ? COLORS.primary : COLORS.gray }]}
                     >
-                        <Text style={{ fontSize: 21, color: isFocused ? 'blue' : 'black' }}>
+                        <Text style={{ fontSize: 21, color: isFocused ? COLORS.primary : COLORS.gray }}>
                             {typeof label === 'string' ? label : route.name}
                         </Text>
                         {index < state.routes.length - 1 && (

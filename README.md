@@ -11,8 +11,8 @@ A React Native project that demonstrates a simple app with user navigation and s
 - **Users Tab**: Displays a list of users. Clicking on a user navigates to a detailed view of that user.
 - **MobX**: Manages state across the app, providing a clean and efficient way to handle application state.
 - **Testing**:
-   - **Unit Tests**: Written with Jest and React Native Testing Library, covering almost 100% of the code.
-   - **Integration Tests**: Performed with Maestro, including flows for normal operation and error handling.
+    - **Unit Tests**: Written with Jest and React Native Testing Library, covering almost 100% of the code.
+    - **Integration Tests**: Performed with Maestro, including flows for normal operation and error handling.
 - **Analytics and Monitoring**: Uses Firebase and Sentry for comprehensive app monitoring and analysis.
 
 ## Technologies
@@ -88,18 +88,18 @@ A React Native project that demonstrates a simple app with user navigation and s
   ```
 
   Maestro will execute the defined flows, including:
-   - Normal flow: Renders the main screen with a welcome text and logo, navigates to the users tab, displays the list of users, and shows user details on click.
-   - Error flow: Simulates an API failure and checks for appropriate error messages.
+    - Normal flow: Renders the main screen with a welcome text and logo, navigates to the users tab, displays the list of users, and shows user details on click.
+    - Error flow: Simulates an API failure and checks for appropriate error messages.
 
 ## Firebase and Sentry
 
 - **Firebase**: Used for various features including:
-   - **Analytics**: Track user interactions and app usage.
-   - **Crashlytics**: Monitor and report crashes and errors.
-   - **Performance Measurement**: Analyze app performance and identify issues.
-   - **Push Notifications**: Manage and send notifications to users.
-   - **A/B Testing**: Test and optimize app features and UI.
-   - **Dynamic Links**: Create and manage links that work across platforms and devices.
+    - **Analytics**: Track user interactions and app usage.
+    - **Crashlytics**: Monitor and report crashes and errors.
+    - **Performance Measurement**: Analyze app performance and identify issues.
+    - **Push Notifications**: Manage and send notifications to users.
+    - **A/B Testing**: Test and optimize app features and UI.
+    - **Dynamic Links**: Create and manage links that work across platforms and devices.
 
 - **Sentry**: Provides real-time error tracking and performance monitoring to help you identify and fix issues quickly.
 
@@ -199,6 +199,26 @@ MobX is a state management library that makes it easy to manage and update the s
 ## DevOps and Automation
 
 - **App Center** and **Fastlane**: Used for continuous integration and deployment. They help automate the build, testing, and release processes for your app.
+
+## FAQs
+
+### Which design pattern/s would you use to manage the state of a medium-large application?
+
+For managing the state of a medium-large application, I prefer using **MobX**. It is handy, easy to use, and provides simple and effective state management. MobX's reactivity model allows for straightforward handling of application state, making it quick to implement and maintain.
+
+### Tell us a little about your experience using mobile hardware in applications using React Native (Camera, Storage, Bluetooth...)
+
+I have extensive experience with mobile hardware integration in React Native. This includes:
+- **Image Recognition**: Using the camera for image recognition tasks.
+- **Offline Data Storage**: Leveraging **Realm** for offline data storage, allowing the app to function without an active internet connection and synchronize data with the server once the connection is restored.
+
+### Tell us a little about your experience publishing applications on different platforms.
+
+I have published around 15 different types of mobile apps for various countries. My experience includes:
+- Configuring app stores and managing app publishing processes.
+- Preparing all necessary configurations and keys.
+- Automating the publishing process, allowing the app to go to review with a single click.
+- Managing different branches (master, prod, staging) for various purposes.
 
 ## License
 

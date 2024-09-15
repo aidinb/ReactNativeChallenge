@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import {COLORS} from '../styles';
 
 const { width } = Dimensions.get('window');
 
@@ -26,17 +27,17 @@ const styles = StyleSheet.create({
     width,
     paddingVertical: 15,
     borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-    paddingHorizontal: 20,
+    borderBottomColor: COLORS.gray,
+    paddingHorizontal: 10,
   },
   title: {
     fontSize: 14,
-    color: '#888',
+    color: COLORS.darkGray,
     marginBottom: 5,
   },
   value: {
     fontSize: 16,
-    color: '#333',
+    color: COLORS.black,
     textAlign: 'center',
   },
 });

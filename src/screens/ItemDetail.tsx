@@ -11,26 +11,29 @@ const ItemDetail: React.FC = () => {
     const { mainStore } = useStores();
     const { user, loading, error } = mainStore;
 
+    if (loading) {
+        return <Loading />;
+    }
+
+    if (error) {
+        return <ErrorMessage message={error} />;
+    }
+
     return (
         <ScrollView contentContainerStyle={styles.scrollContainer}>
-            {!loading && !error && user && (
-                <View style={styles.container}>
-                    <DetailItem title="Name" value={user.name} />
-                    <DetailItem title="Email" value={user.email} />
-                    <DetailItem title="Website" value={user.website} />
-                    <DetailItem title="Phone" value={user.phone} />
-                    <DetailItem title="Street" value={user.address?.street} />
-                    <DetailItem title="Suite" value={user.address?.suite} />
-                    <DetailItem title="City" value={user.address?.city} />
-                    <DetailItem title="Zipcode" value={user.address?.zipcode} />
-                    <DetailItem title="Company Name" value={user.company?.name} />
-                    <DetailItem title="CatchPhrase" value={user.company?.catchPhrase} />
-                    <DetailItem title="Business" value={user.company?.bs} />
-                </View>
-            )}
-
-            {loading && <Loading />}
-            {error && <ErrorMessage message={error} />}
+            <View style={styles.container}>
+                <DetailItem title="Name" value={user.name} />
+                <DetailItem title="Email" value={user.email} />
+                <DetailItem title="Website" value={user.website} />
+                <DetailItem title="Phone" value={user.phone} />
+                <DetailItem title="Street" value={user.address?.street} />
+                <DetailItem title="Suite" value={user.address?.suite} />
+                <DetailItem title="City" value={user.address?.city} />
+                <DetailItem title="Zipcode" value={user.address?.zipcode} />
+                <DetailItem title="Company Name" value={user.company?.name} />
+                <DetailItem title="CatchPhrase" value={user.company?.catchPhrase} />
+                <DetailItem title="Business" value={user.company?.bs} />
+            </View>
         </ScrollView>
     );
 };
@@ -42,6 +45,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: COLORS.white,
         flex: 1,
+        paddingHorizontal: 16,
     },
 });
 

@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         borderTopWidth: 1,
-        borderTopColor: 'gray',
+        borderTopColor: COLORS.gray,
         height: 70,
         alignItems: 'center',
         justifyContent: 'center',
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
         right: 0,
         height: '100%',
         width: 1,
-        backgroundColor: 'gray',
+        backgroundColor: COLORS.gray,
     },
 });
 

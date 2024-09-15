@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { View, StyleSheet, FlatList, ListRenderItem } from 'react-native';
 import { observer } from 'mobx-react';
 import { COLORS } from '../styles';
@@ -7,7 +7,7 @@ import { useStores } from '../stores';
 import UserItem from '../components/UserItem';
 import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
-import {Item} from '../utils/types.ts';
+import { Item } from '../utils/types';
 
 const Items: React.FC = () => {
     const { mainStore } = useStores(); // Access the store
@@ -16,7 +16,7 @@ const Items: React.FC = () => {
         mainStore.getAllUsers();
     }, [mainStore]);
 
-    const renderItems: ListRenderItem<Item> = useCallback(
+    const renderItem: ListRenderItem<Item> = useCallback(
         ({ item }) => (
             <UserItem
                 item={item}
@@ -29,18 +29,22 @@ const Items: React.FC = () => {
         [mainStore]
     );
 
+    if (mainStore.loading) {
+        return <Loading />;
+    }
+
+    if (mainStore.error) {
+        return <ErrorMessage message={mainStore.error} />;
+    }
+
     return (
         <View style={styles.container}>
-            {!mainStore.loading && !mainStore.error && (
-                <FlatList
-                    showsVerticalScrollIndicator={false}
-                    keyExtractor={(item) => item.id.toString()} // Use id directly as string
-                    data={mainStore.allUsers}
-                    renderItem={renderItems}
-                />
-            )}
-            {mainStore.loading && <Loading />}
-            {mainStore.error && <ErrorMessage message={mainStore.error} />}
+            <FlatList
+                showsVerticalScrollIndicator={false}
+                keyExtractor={(item) => item.id.toString()}
+                data={mainStore.allUsers}
+                renderItem={renderItem}
+            />
         </View>
     );
 };

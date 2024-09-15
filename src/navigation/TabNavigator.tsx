@@ -5,12 +5,11 @@ import Items from '../screens/Items';
 import CustomTabBar from '../components/CustomTabBar.tsx';
 
 export type BottomTabNavigatorParamList = {
-    Main: undefined; // No parameters are expected for MainTab
-    Users: undefined; // No parameters are expected for ItemsTab
+    Main: {};
+    Users: {};
 };
 
 const Tab = createBottomTabNavigator<BottomTabNavigatorParamList>();
-
 
 export const TabNavigator: React.FC = () => {
     return (

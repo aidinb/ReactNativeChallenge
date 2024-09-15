@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet, Dimensions } from 'react-native';
 import { Item } from '../utils/types.ts';
+import {COLORS} from '../styles';
 
 interface UserItemProps {
   item: Item;
@@ -22,10 +23,10 @@ const styles = StyleSheet.create({
   card: {
     width: width * 0.9,
     paddingVertical: 15,
-    backgroundColor: '#ffffff',
+    backgroundColor: COLORS.white,
     marginVertical: 10,
     borderRadius: 8,
-    shadowColor: '#000',
+    shadowColor: COLORS.black,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 4,
@@ -34,7 +35,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    color: '#333',
+    color: COLORS.black,
     paddingLeft: 15,
   },
 });

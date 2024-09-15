@@ -1,79 +1,207 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
-# Getting Started
+---
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+# React Native Challenge
 
-## Step 1: Start the Metro Server
+A React Native project that demonstrates a simple app with user navigation and state management. This project uses React Navigation for handling navigation between screens, MobX for state management, and integrates unit and end-to-end (e2e) testing.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+- **Navigation**: Uses React Navigation with two tabs: **Main** and **Users**.
+- **Users Tab**: Displays a list of users. Clicking on a user navigates to a detailed view of that user.
+- **MobX**: Manages state across the app, providing a clean and efficient way to handle application state.
+- **Testing**:
+   - **Unit Tests**: Written with Jest and React Native Testing Library, covering almost 100% of the code.
+   - **Integration Tests**: Performed with Maestro, including flows for normal operation and error handling.
+- **Analytics and Monitoring**: Uses Firebase and Sentry for comprehensive app monitoring and analysis.
 
-```bash
-# using npm
-npm start
+## Technologies
 
-# OR using Yarn
-yarn start
-```
+- **React Native**: Framework for building native apps using React.
+- **React Navigation**: Navigation library for React Native.
+- **MobX**: State management library that makes it simple to manage and update the application state.
+- **Firebase**: Provides analytics, crashlytics, performance measurement, push notifications, A/B testing, and dynamic links.
+- **Sentry**: Error tracking and performance monitoring tool.
+- **Jest**: JavaScript testing framework for unit testing.
+- **React Native Testing Library**: Provides utilities for testing React Native components.
+- **Maestro**: Tool for end-to-end testing of React Native apps.
+- **App Center** and **Fastlane**: Used for DevOps and automation of app builds and releases.
 
-## Step 2: Start your Application
+## Installation
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+1. **Clone the repository**:
 
-### For Android
+   ```bash
+   git clone https://github.com/yourusername/reactnativechallenge.git
+   ```
 
-```bash
-# using npm
-npm run android
+2. **Navigate to the project directory**:
 
-# OR using Yarn
-yarn android
-```
+   ```bash
+   cd reactnativechallenge
+   ```
 
-### For iOS
+3. **Install dependencies**:
 
-```bash
-# using npm
-npm run ios
+   ```bash
+   npm install
+   ```
 
-# OR using Yarn
-yarn ios
-```
+## Running the Project
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+- **Start the Metro bundler**:
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+  ```bash
+  npm run start
+  ```
 
-## Step 3: Modifying your App
+- **Run on Android**:
 
-Now that you have successfully run the app, let's modify it.
+  ```bash
+  npm run android
+  ```
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+- **Run on iOS**:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+  ```bash
+  npm run ios
+  ```
 
-## Congratulations! :tada:
+## Testing
 
-You've successfully run and modified your React Native App. :partying_face:
+- **Unit Tests**:
 
-### Now what?
+  Run the unit tests using Jest:
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+  ```bash
+  npm run test
+  ```
 
-# Troubleshooting
+  This command runs the tests with almost 100% coverage.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+- **End-to-End Tests**:
 
-# Learn More
+  Run end-to-end tests with Maestro:
 
-To learn more about React Native, take a look at the following resources:
+  ```bash
+  npm run e2e
+  ```
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+  Maestro will execute the defined flows, including:
+   - Normal flow: Renders the main screen with a welcome text and logo, navigates to the users tab, displays the list of users, and shows user details on click.
+   - Error flow: Simulates an API failure and checks for appropriate error messages.
+
+## Firebase and Sentry
+
+- **Firebase**: Used for various features including:
+   - **Analytics**: Track user interactions and app usage.
+   - **Crashlytics**: Monitor and report crashes and errors.
+   - **Performance Measurement**: Analyze app performance and identify issues.
+   - **Push Notifications**: Manage and send notifications to users.
+   - **A/B Testing**: Test and optimize app features and UI.
+   - **Dynamic Links**: Create and manage links that work across platforms and devices.
+
+- **Sentry**: Provides real-time error tracking and performance monitoring to help you identify and fix issues quickly.
+
+## MobX
+
+MobX is a state management library that makes it easy to manage and update the state in your React Native application. It allows for reactive state management, meaning that components automatically update when the state they depend on changes.
+
+### How to Use MobX
+
+1. **Create a Store**:
+
+   Define your state and actions in a MobX store. For example:
+
+   ```typescript
+   import { makeAutoObservable } from 'mobx';
+
+   class UserStore {
+     users = [];
+
+     constructor() {
+       makeAutoObservable(this);
+     }
+
+     addUser(user) {
+       this.users.push(user);
+     }
+
+     // Other actions and state management methods
+   }
+
+   export const userStore = new UserStore();
+   ```
+
+2. **Use the Store in Components**:
+
+   Use the store in your components with MobX's `observer` function:
+
+   ```typescript
+   import React from 'react';
+   import { observer } from 'mobx-react';
+   import { userStore } from './UserStore';
+
+   const UserList = observer(() => {
+     return (
+       <View>
+         {userStore.users.map(user => (
+           <Text key={user.id}>{user.name}</Text>
+         ))}
+       </View>
+     );
+   });
+
+   export default UserList;
+   ```
+
+## Maestro
+
+[Maestro](https://github.com/maestro-testing/maestro) is an end-to-end testing tool for React Native applications. It allows you to create and run automated tests that simulate user interactions and verify the app's behavior in real-world scenarios.
+
+### Key Features
+
+- **Automated Flows**: Define complex user flows and test them automatically.
+- **Error Handling**: Simulate error scenarios and validate that the app responds correctly.
+- **Cross-Platform Testing**: Run tests on both iOS and Android platforms.
+
+### How to Use Maestro
+
+1. **Define Test Flows**:
+
+   Create Maestro test scripts in the `.maestro` directory to define your testing scenarios. For example:
+
+   ```yaml
+   flows:
+     - name: Normal Flow
+       steps:
+         - render: MainScreen
+         - click: UserTab
+         - click: UserListItem
+         - validate: UserDetailScreen
+
+     - name: Error Flow
+       steps:
+         - simulate: ApiFailure
+         - validate: ErrorMessage
+   ```
+
+2. **Run Tests**:
+
+   Execute the test scripts with the following command:
+
+   ```bash
+   npm run e2e
+   ```
+
+   Maestro will run the defined flows, providing feedback on the app's behavior and ensuring that it meets the specified requirements.
+
+## DevOps and Automation
+
+- **App Center** and **Fastlane**: Used for continuous integration and deployment. They help automate the build, testing, and release processes for your app.
+
+## License
+
+This project is licensed under the MIT License. For any inquiries, contact Aidin Bazarchi at aidin.b2009@gmail.com.
+
+---

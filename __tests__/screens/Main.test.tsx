@@ -17,6 +17,6 @@ describe('Main Screen', () => {
     it('contains an image with the correct source', () => {
         const { getByTestId } = render(<Main />);
         const image = getByTestId('logo-image');
-        expect(image.props.source).toEqual(require('../../src/assets/browse-cuisines.png'));
+        expect(image.props.source).toEqual(require('../../src/assets/reactnativelogo.png'));
     });
 });

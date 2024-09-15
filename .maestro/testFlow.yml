@@ -5,7 +5,7 @@ appId: com.reactnativechallenge
     text: "Welcome"
 - assertVisible:
     id: "logo-image"
-- tapOn: "Users, tab, 2 of 2"
+- tapOn: "Users"
 - assertVisible:
     text: "Nicholas Runolfsdottir V"
 - assertVisible:

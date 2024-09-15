@@ -1,0 +1,14 @@
+appId: com.reactnativechallenge
+---
+- launchApp
+- assertVisible:
+      text: "Welcome"
+- assertVisible:
+      id: "logo-image"
+- tapOn: "Users"
+- runFlow:
+      when:
+          notVisible: "Nicholas Runolfsdottir V"
+      commands:
+          - assertVisible:
+                text: "Failed to fetch users"

@@ -1,9 +1,7 @@
 import React from 'react';
 import { render, waitFor, fireEvent } from '@testing-library/react-native';
-import { act } from 'react-test-renderer';
 import Items from '../../src/screens/Items.tsx';
 import NavigationService from '../../src/navigation/NavigationService.ts';
-
 
 // Mock NavigationService
 jest.mock('../../src/navigation/NavigationService.ts', () => ({
@@ -28,12 +26,11 @@ describe('Items Screen', () => {
         const { getByText } = render(<Items />);
 
         // Simulate pressing a user item
-        await act(async () => {
-            // Find the first user item by text and simulate a press
-            fireEvent.press(getByText('User 1'));
-        });
+        fireEvent.press(getByText('User 1'));
 
         // Verify that the navigation function was called
-        expect(NavigationService.navigate).toHaveBeenCalledWith('ItemDetail');
+        await waitFor(() => {
+            expect(NavigationService.navigate).toHaveBeenCalledWith('ItemDetail');
+        });
     });
 });

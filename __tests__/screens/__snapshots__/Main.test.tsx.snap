@@ -29,7 +29,7 @@ exports[`Main Screen renders correctly 1`] = `
   <Image
     source={
       {
-        "testUri": "../../../src/assets/browse-cuisines.png",
+        "testUri": "../../../src/assets/reactnativelogo.png",
       }
     }
     style={
